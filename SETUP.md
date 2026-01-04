@@ -4,11 +4,14 @@
 
 Your AI-powered Christmas card generator is ready! Here's how to get it running:
 
-### 1. Upload Your Art Style Images to Imgur
+### 1. Upload Your Art Style Images to GitHub
 
-1. Go to [Imgur](https://imgur.com/)
-2. Upload your 3-5 example drawings/artworks
-3. For each image, right-click and copy the direct image URL (should end in `.jpg`, `.png`, etc.)
+1. Create a `style-images/` folder in your repository
+2. Add your 3-5 example drawings/artworks to this folder
+3. Commit and push to GitHub
+4. Get the raw URLs for each image:
+   - Go to your image on GitHub
+   - Click the "Raw" button or use format: `https://raw.githubusercontent.com/YOUR_USERNAME/christmas-cards/main/style-images/image-name.jpg`
 
 ### 2. Get a Replicate API Key
 
@@ -25,12 +28,12 @@ Open the `.env` file in this directory and update it:
 # Paste your Replicate API key here
 VITE_REPLICATE_API_KEY=r8_your_actual_api_key_here
 
-# Paste your Imgur image URLs here (3-5 images)
-VITE_STYLE_IMAGE_1=https://i.imgur.com/abc123.jpg
-VITE_STYLE_IMAGE_2=https://i.imgur.com/def456.png
-VITE_STYLE_IMAGE_3=https://i.imgur.com/ghi789.jpg
-VITE_STYLE_IMAGE_4=https://i.imgur.com/jkl012.jpg
-VITE_STYLE_IMAGE_5=https://i.imgur.com/mno345.jpg
+# Paste your GitHub raw image URLs here (3-5 images)
+VITE_STYLE_IMAGE_1=https://raw.githubusercontent.com/YOUR_USERNAME/christmas-cards/main/style-images/image-1.jpg
+VITE_STYLE_IMAGE_2=https://raw.githubusercontent.com/YOUR_USERNAME/christmas-cards/main/style-images/image-2.jpg
+VITE_STYLE_IMAGE_3=https://raw.githubusercontent.com/YOUR_USERNAME/christmas-cards/main/style-images/image-3.jpg
+VITE_STYLE_IMAGE_4=https://raw.githubusercontent.com/YOUR_USERNAME/christmas-cards/main/style-images/image-4.jpg
+VITE_STYLE_IMAGE_5=https://raw.githubusercontent.com/YOUR_USERNAME/christmas-cards/main/style-images/image-5.jpg
 ```
 
 ### 4. Run the App

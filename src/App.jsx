@@ -4,7 +4,7 @@ import { generateChristmasCard, isReplicateConfigured } from './api/replicate';
 import './App.css';
 
 function App() {
-  const [message, setMessage] = useState('With love and gratitude!');
+  const [message, setMessage] = useState('');
   const [imagePrompt, setImagePrompt] = useState('');
   const [generatedImage, setGeneratedImage] = useState(null);
   const [isGenerating, setIsGenerating] = useState(false);
@@ -93,7 +93,7 @@ function App() {
                   onChange={(e) => setMessage(e.target.value)}
                   rows="2"
                   className="form-textarea"
-                  placeholder="e.g., Merry Christmas, Mom! Love you!"
+                  placeholder="With love and gratitude!"
                   maxLength={100}
                   style={{ fontFamily: fontOptions.find(f => f.id === selectedFont)?.fontFamily }}
                 />
@@ -129,7 +129,7 @@ function App() {
               <p className="form-hint">Be creative! Describe the Christmas scene you imagine</p>
             </div>
 
-            {/* Example Prompts */}
+            {/* Example Prompts
             <div className="example-prompts">
               <p className="example-label">Quick ideas:</p>
               <div className="example-buttons">
@@ -143,7 +143,7 @@ function App() {
                   </button>
                 ))}
               </div>
-            </div>
+            </div> */}
 
             {error && (
               <div className="error-message">
@@ -180,7 +180,7 @@ function App() {
             {/* Info about style */}
             <div className="info-box">
               <p className="info-text">
-                🎨 All cards are generated in the unique art style you provided!
+                🎨 All cards are generated in the unique art style created by me!
               </p>
             </div>
           </div>
