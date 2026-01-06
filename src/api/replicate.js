@@ -23,6 +23,16 @@ const getStyleImages = () => {
  * @returns {Promise<string>} - URL of the generated image
  */
 export async function generateChristmasCard(prompt) {
+  // TEST MODE: Use placeholder image for testing watermark
+  const TEST_MODE = true; // Set to false when you have API key
+
+  if (TEST_MODE) {
+    // Simulate API delay
+    await new Promise(resolve => setTimeout(resolve, 2000));
+    // Return a test Christmas image
+    return 'https://images.unsplash.com/photo-1512389142860-9c449e58a543?w=800&h=1000&fit=crop';
+  }
+
   try {
     const styleImages = getStyleImages();
 
@@ -64,6 +74,13 @@ export async function generateChristmasCard(prompt) {
  * @returns {boolean}
  */
 export function isReplicateConfigured() {
+  // TEST MODE: Always return true for testing
+  const TEST_MODE = true; // Set to false when you have API key
+
+  if (TEST_MODE) {
+    return true;
+  }
+
   const apiKey = import.meta.env.VITE_REPLICATE_API_KEY;
   const styleImages = getStyleImages();
 

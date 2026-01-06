@@ -17,6 +17,24 @@ export default function CardPreview({ imageUrl, message, isLoading, fontFamily =
               alt="Generated Christmas Card"
               className="card-image"
             />
+            {/* Watermark overlay */}
+            <div className="watermark-overlay">
+              <img
+                src="https://raw.githubusercontent.com/statcatio/christmas-card-generator/main/public/preview.png"
+                alt="watermark"
+                className="watermark-image watermark-top-left"
+              />
+              <img
+                src="https://raw.githubusercontent.com/statcatio/christmas-card-generator/main/public/preview.png"
+                alt="watermark"
+                className="watermark-image watermark-center"
+              />
+              <img
+                src="https://raw.githubusercontent.com/statcatio/christmas-card-generator/main/public/preview.png"
+                alt="watermark"
+                className="watermark-image watermark-bottom-right"
+              />
+            </div>
             {message && (
               <div className="card-message-overlay">
                 <p className="card-message-text" style={{ fontFamily }}>{message}</p>
