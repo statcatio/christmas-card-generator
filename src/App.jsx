@@ -74,8 +74,8 @@ function App() {
     <div className="app-container">
       {/* Header */}
       <header className="app-header">
-        <h1 className="app-title">Christmas Card Generator</h1>
-        <p className="app-subtitle">Create magical Christmas cards in your unique art style</p>
+        <h1 className="app-title">Christmas Card Maker</h1>
+        <p className="app-subtitle">Add images, text, stickers and more to create your own totally unique holiday card!</p>
       </header>
 
       {/* Main Content - Split Screen */}
@@ -93,7 +93,7 @@ function App() {
                   onChange={(e) => setMessage(e.target.value)}
                   rows="2"
                   className="form-textarea"
-                  placeholder="With love and gratitude!"
+                  placeholder="e.g. With love and gratitude!"
                   maxLength={100}
                   style={{ fontFamily: fontOptions.find(f => f.id === selectedFont)?.fontFamily }}
                 />
